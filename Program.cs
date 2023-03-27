@@ -11,7 +11,7 @@ builder.Configuration.AddJsonFile($"appsettings.{builder.Environment.Environment
 builder.Configuration.AddEnvironmentVariables();
 
 //register mysql datacontext class
-var connectionString = builder.Configuration.GetConnectionString("PortfolioContext");
+var connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
 
 //register datacontext class
 builder.Services.AddDbContext<PortfolioContext>(options =>
